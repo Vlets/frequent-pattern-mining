@@ -1,44 +1,44 @@
-#frequentPattern.py
+# frequentPattern.py
 Generate frequent itemsets from vocab.txt and topic-i.txt to patterns/pattern-i.txt (where 0 <= i <= 4) using Apriori.
 
-##vocab.txt
+## vocab.txt
 A dictionary that maps a term to an index.<br>
 format: index	term<br>
 Columns are separated by a tab.
 
-##topi-i.txt
+## topi-i.txt
 Input file of frequent pattern mining algorithms. Each line represents a transaction with indices of terms.<br>
 format: term1_index term2_index term3_index ...<br>
 Columns are separated by a space.
 
-##pattern-i.txt
+## pattern-i.txt
 Output file of frequent pattern mining algorithms. Each line represents a transaction with frequent itemsets sorted in descending order of support count.<br>
 format: support_count	term1 term2 ...<br>
 support_count and term1 are separated by a tab, while terms are separated by a space.
 
-##Usage
+## Usage
 - topic-i.txt and vocab.txt should be at the same level as where frequentPattern.py is
 - a directory called patterns should be created first
 - command to run the script: python frequentPattern.py
 
-#closedPattern.py
+# closedPattern.py
 Generate closed patterns from patterns/pattern-i.txt to closed/closed-i.txt (where 0 <= i <= 4).
 
-##closed-i.txt
+## closed-i.txt
 The format is the same as pattern-i.txt.
 
-##Usage
+## Usage
 - frequentPattern.py should be run first to generate the required input files patterns/pattern-i.txt
 - a directory called closed should be created first
 - command to run the script: python closedPattern.py
 
-#maxPattern.py
+# maxPattern.py
 Generate max patterns from patterns/pattern-i.txt to max/max-i.txt (where 0 <= i <= 4).
 
-##max-i.txt
+## max-i.txt
 The format is the same as pattern-i.txt.
 
-##Usage
+## Usage
 - frequentPattern.py should be run first to generate the required input files patterns/pattern-i.txt
 - a directory called max should be created first
 - command to run the script: python maxPattern.py
